@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     const message = document.getElementById("message");
+    let isClicked = false;
 
     message.onclick = changeMessageColor;
 
     function changeMessageColor() {
-        // This function changes the color of message to purple when click
-        message.style.color = "#674188";
+        let color = "#674188";
+       if (!isClicked) {
+         // This function toggles the color of message between black and purple. 
+         color = "#674188";
+       } else {
+         color = "#000000";
+       }
+       message.style.color = color;
+       isClicked = !isClicked;
     }
 
 });
