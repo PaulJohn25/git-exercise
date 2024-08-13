@@ -1,3 +1,5 @@
 h1 {
     color: green;
+    cursor: pointer;
+    user-select: none;
 }
